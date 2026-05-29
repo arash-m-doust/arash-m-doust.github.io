@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bahram Mohammaddoust — Design-AI Systems Integrator</title>
+<meta name="description" content="Bahram Mohammaddoust — Design-AI Systems Integrator. Computational design and AI-assisted concept-to-execution workflows for architecture and design practice." />
+
+<!-- =========================================================
+     PUBLIC ACADEMIC WEBSITE
+     Present-tense only: who I am, what I have done, what I research.
+     No roadmap, no future tasks, no photo. CV is offered on request.
+     No external fonts/libraries (reliable on GitHub Pages, works offline).
+     Edit accent via --accent. Contact email is in the Contact section.
+     ========================================================= -->
+
+<style>
+  :root{
+    --bg:#fbfaf7; --surface:#ffffff; --ink:#1b1d1e; --muted:#5b6166;
+    --line:#e6e2da; --accent:#365a6e; --accent-2:#4f7d92; --accent-soft:#eef3f5;
+    --maxw:780px;
+    --font-display:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,"Helvetica Neue",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;color:var(--ink);font-family:var(--font-body);font-size:18px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:var(--bg);
+    background-image:
+      linear-gradient(to right, rgba(54,90,110,.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(54,90,110,.03) 1px, transparent 1px);
+    background-size:48px 48px;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;text-underline-offset:3px;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  .topbar{position:sticky;top:0;z-index:10;background:rgba(252,251,248,.92);
+    backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid var(--line);
+    box-shadow:0 1px 0 rgba(27,29,30,.02);}
+  .topbar .nav-wrap{max-width:1120px;margin:0 auto;padding:0 32px;display:flex;
+    align-items:center;justify-content:space-between;height:66px;}
+  .brand{font-family:var(--font-display);font-size:1rem;letter-spacing:.3px;color:var(--ink);white-space:nowrap;}
+  .nav{display:flex;align-items:center;gap:1.35rem;}
+  .nav a{color:var(--muted);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;
+    margin-left:0;padding:.2rem 0;transition:color .2s ease;white-space:nowrap;}
+  .nav a:hover{color:var(--accent);text-decoration:none;}
+  @media(max-width:760px){
+    .nav{display:none;}
+    .topbar .nav-wrap{padding:0 20px;height:60px;}
+  }
+
+  section{padding:3.4rem 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .label{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--accent);font-weight:600;margin:0 0 1.1rem;}
+  h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.18;letter-spacing:-.01em;}
+  h2{font-size:1.55rem;margin:.2rem 0 1rem;}
+  h3{font-size:1.1rem;margin:0 0 .35rem;}
+  p{margin:0 0 1rem;}
+  .muted{color:var(--muted);}
+
+  .hero{padding:5rem 0 3.6rem;border-bottom:1px solid var(--line);}
+  .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:1rem;opacity:0;animation:fade .6s ease .05s forwards;}
+  .hero h1{font-size:2.8rem;margin:0 0 .45rem;opacity:0;animation:rise .7s ease .12s forwards;}
+  .role{font-size:1.2rem;color:var(--accent);font-family:var(--font-display);margin:0 0 .9rem;opacity:0;animation:rise .7s ease .2s forwards;}
+  .accent-rule{height:2px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));margin:0 0 1.2rem;border-radius:2px;animation:draw 1s ease .5s forwards;}
+  .lede{font-size:1.06rem;max-width:56ch;opacity:0;animation:fade .7s ease .35s forwards;}
+  .hero-links{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem;opacity:0;animation:fade .7s ease .5s forwards;}
+  .btn{display:inline-block;font-size:.85rem;letter-spacing:.03em;padding:.52rem .98rem;border:1px solid var(--line);border-radius:3px;color:var(--ink);background:var(--surface);
+    transition:border-color .2s ease,color .2s ease,transform .2s ease,box-shadow .2s ease;}
+  .btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;transform:translateY(-1px);box-shadow:0 4px 14px rgba(54,90,110,.08);}
+  .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .btn.primary:hover{background:#2b4a5b;color:#fff;}
+  @media(max-width:560px){.hero h1{font-size:2.15rem;}}
+
+  .focus{display:grid;gap:1.1rem;margin-top:.4rem;}
+  .focus .item{padding-left:1rem;border-left:2px solid var(--accent);transition:border-color .2s ease;}
+  .focus .item:hover{border-left-color:var(--accent-2);}
+  .focus .item strong{font-family:var(--font-display);font-weight:600;}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:1.5rem 1.6rem;margin-top:1rem;
+    transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+  .card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(27,29,30,.06);border-color:#d7d2c8;}
+  .card .tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
+  .card h3{margin-top:.3rem;}
+  .bullets{margin:.6rem 0 0;padding-left:1.1rem;}
+  .bullets li{margin:.3rem 0;}
+
+  .skills{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 2rem;margin-top:.4rem;}
+  .skills h3{margin:0 0 .35rem;font-size:.95rem;}
+  .skills ul{margin:0;padding:0;list-style:none;}
+  .skills li{font-size:.94rem;color:var(--muted);padding:.12rem 0;}
+  @media(max-width:560px){.skills{grid-template-columns:1fr;}}
+
+  .exp .row,.edu .row{padding:1rem 0;border-top:1px solid var(--line);}
+  .exp .row:first-child,.edu .row:first-child{border-top:none;}
+  .when{font-size:.8rem;color:var(--muted);letter-spacing:.02em;}
+  .what{font-family:var(--font-display);font-size:1.02rem;margin:.15rem 0;}
+  .desc{font-size:.95rem;color:var(--muted);margin:0;}
+
+  .proj{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.4rem;}
+  .proj .p{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:1.1rem 1.2rem;transition:transform .2s ease,box-shadow .2s ease;}
+  .proj .p:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(27,29,30,.05);}
+  .proj .p h3{font-size:1rem;}
+  .proj .p p{font-size:.9rem;color:var(--muted);margin:0;}
+  @media(max-width:560px){.proj{grid-template-columns:1fr;}}
+
+  .contact-links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem;}
+  footer{padding:2.4rem 0;color:var(--muted);font-size:.84rem;}
+
+  .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+  .js .reveal.in{opacity:1;transform:none;}
+  @keyframes fade{to{opacity:1;}}
+  @keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+  @keyframes draw{to{width:60px;}}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;}.js .reveal{opacity:1!important;transform:none!important;}.accent-rule{width:60px;}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="nav-wrap">
+    <span class="brand">Bahram Mohammaddoust</span>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#detail-design">Flagship</a>
+      <a href="#bextudio">Systems</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="top" style="border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <p class="eyebrow">Computational Design · AI-assisted Concept-to-Execution</p>
+    <h1>Bahram Mohammaddoust</h1>
+    <p class="role">Design-AI Systems Integrator</p>
+    <div class="accent-rule" aria-hidden="true"></div>
+    <p class="lede">I work in computational design, building AI-assisted concept-to-execution
+      workflows for architecture and design practice — systems that translate design concepts into
+      documented, technically reviewable outputs that can support fabrication and BIM workflows,
+      while keeping the designer in control.</p>
+    <div class="hero-links">
+      <a class="btn primary" href="#research">Research focus</a>
+      <a class="btn" href="#detail-design">Flagship artifact</a>
+      <a class="btn" href="https://github.com/bahram-m-doust">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap reveal">
+    <p class="label">About</p>
+    <h2>Architect-trained, systems-minded, building with AI</h2>
+    <p>My work spans architecture and energy-conscious building design, BIM and as-built
+      documentation, 3D and spatial design, and the development of applied AI systems. I currently
+      lead the developer team in the AI division of an established advertising agency, where I design
+      and deploy AI systems used in real design and creative workflows.</p>
+    <p>One approach connects these stages: I am an integrator. I combine existing models, pipelines,
+      and design knowledge into systems that help practitioners — designers, BIM modellers, production
+      teams — work more effectively. My research applies this integration practice within
+      computational design, with architecture, fabrication, and AEC documentation as the domain.</p>
+  </div>
+</section>
+
+<!-- RESEARCH FOCUS -->
+<section id="research">
+  <div class="wrap reveal">
+    <p class="label">Research Focus</p>
+    <h2>AI-assisted concept-to-execution for design and the built environment</h2>
+    <p class="muted">A persistent gap separates expressive design concepts from buildable, documented,
+      fabrication-oriented output. My current research direction examines how generative and multimodal
+      AI can help close that gap responsibly, with the designer retaining control of the outcome.</p>
+    <div class="focus">
+      <div class="item"><strong>Concept-to-fabrication &amp; concept-to-BIM workflows.</strong>
+        Translating concept imagery into dimensioned, materially-specified, documentation-oriented output.</div>
+      <div class="item"><strong>Composable generative-AI pipelines for design.</strong>
+        Architectures and methods for combining models into reliable, end-to-end design tooling.</div>
+      <div class="item"><strong>Verification &amp; fabrication-readiness.</strong>
+        Evaluation methods for the quality and buildability of AI-generated design documentation.</div>
+      <div class="item"><strong>Designer agency in AI-augmented practice.</strong>
+        How tools should distribute control between human and system in professional design work.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FLAGSHIP -->
+<section id="detail-design">
+  <div class="wrap reveal">
+    <p class="label">Flagship Research Artifact</p>
+    <h2>Detail Design Agent / AIQ Studio</h2>
+    <p>An early research prototype investigating an AI pipeline that transforms a 2D concept image,
+      moodboard, or reference into engineering-oriented output: dimensioned blueprints, orthographic,
+      sectional and exploded views, material recommendations, fabrication logic, and render-ready
+      3D meshes.</p>
+    <div class="card">
+      <span class="tag">The problem · The approach</span>
+      <h3>From designer vision to execution reality</h3>
+      <p class="muted">Concept visuals are rich but lack dimensions, material specifications, assembly
+        and fabrication logic, and manufacturability data — leaving a gap between design and the
+        factory/BIM floor. The prototype explores vision-language models, monocular depth estimation,
+        3D reconstruction, and generative technical drawing to narrow it. It is an early proof of
+        concept and a foundation for future evaluation in AI-assisted concept-to-execution.</p>
+      <p style="margin-top:.4rem;" class="muted">Repository documentation is being prepared.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BEXTUDIO -->
+<section id="bextudio">
+  <div class="wrap reveal">
+    <p class="label">Supporting System</p>
+    <h2>Bextudio — Design-AI Systems Integration</h2>
+    <p>A brand strategy and generation platform built around an integrated knowledge core that unifies
+      strategy, verbal identity, and visual identity into retrieval-grounded agents and generation
+      workflows. Bextudio demonstrates my ability to integrate complex, multi-component AI systems for
+      real design work, and supports — rather than defines — my research direction.</p>
+    <div class="card">
+      <span class="tag">Why it matters</span>
+      <h3>Evidence of systems integration</h3>
+      <ul class="bullets">
+        <li>RAG- and API-based architecture connecting strategy, identity, and creative production.</li>
+        <li>Brand-specific agents and a library of deployed, in-use generative tools.</li>
+        <li>Demonstrates the systems-thinking underpinning my research.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap reveal">
+    <p class="label">Skills</p>
+    <h2>Technical &amp; design capability</h2>
+    <div class="skills">
+      <div>
+        <h3>AI systems &amp; development</h3>
+        <ul><li>Python, REST APIs</li><li>RAG, agents, LLM tooling</li><li>N8N automation, ComfyUI</li><li>AI image / video pipelines</li></ul>
+      </div>
+      <div>
+        <h3>Computational design &amp; 3D</h3>
+        <ul><li>Rhino, SketchUp, Blender</li><li>Unreal Engine (real-time, avatar)</li><li>Image-to-3D, .glb workflows</li></ul>
+      </div>
+      <div>
+        <h3>Architecture &amp; BIM</h3>
+        <ul><li>Revit, AutoCAD</li><li>BIM modelling, IFC concepts</li><li>Phase 2 drawings, as-built docs</li><li>Energy-conscious design</li></ul>
+      </div>
+      <div>
+        <h3>Design &amp; production</h3>
+        <ul><li>Visual identity &amp; brand systems</li><li>Exhibition &amp; spatial design</li><li>Photoshop, After Effects, DaVinci</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap reveal">
+    <p class="label">Selected Experience</p>
+    <h2>Professional background</h2>
+    <div class="exp">
+      <div class="row">
+        <div class="when">Jan 2025 — Present</div>
+        <div class="what">AI Division Lead / R&amp;D — Iran Novin Advertising Agency</div>
+        <p class="desc">Lead the AI developer team. Built deployed brand-AI systems, image/video
+          generation pipelines (N8N + ComfyUI), a Python API generation application, and Unreal Engine
+          experiences; contributed to AI-generated media used in broadcast advertising contexts.</p>
+      </div>
+      <div class="row">
+        <div class="when">Jul 2023 — Dec 2024</div>
+        <div class="what">3D Generalist &amp; Design/Execution Specialist — Arva Tools</div>
+        <p class="desc">Designed exhibition booths, dealership interiors, product models, and CGI/VFX/
+          motion assets; managed full-cycle virtual-tour production from concept to delivery.</p>
+      </div>
+      <div class="row">
+        <div class="when">2019 — 2023</div>
+        <div class="what">Phase 2 Draftsman, BIM Specialist, Site Supervisor — District 22 Engineering Dept.</div>
+        <p class="desc">Delivered Phase 2 architectural drawings, BIM models, and as-built
+          documentation; supervised on-site activities for a clinic construction project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap reveal">
+    <p class="label">Education</p>
+    <h2>Academic background</h2>
+    <div class="edu">
+      <div class="row">
+        <div class="when">2017 — 2019</div>
+        <div class="what">M.Sc., Energy Architecture — Energy Institute of Higher Education, Tehran</div>
+        <p class="desc">Thesis on material substitution in building façades, combining technical
+          analysis with economic justification.</p>
+      </div>
+      <div class="row">
+        <div class="when">2013 — 2016</div>
+        <div class="what">B.Arch., Architecture — Islamic Azad University, South Tehran Branch</div>
+        <p class="desc">Thesis on the design of a gaming and competition centre, focused on building
+          function and user needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED PROJECTS / ARTIFACTS -->
+<section id="projects">
+  <div class="wrap reveal">
+    <p class="label">Selected Projects &amp; Artifacts</p>
+    <h2>Representative work</h2>
+    <div class="proj">
+      <div class="p"><h3>Detail Design Agent / AIQ Studio</h3><p>Concept-to-execution research prototype (early proof of concept).</p></div>
+      <div class="p"><h3>Bextudio</h3><p>Integrated brand-AI platform; evidence of multi-component systems integration.</p></div>
+      <div class="p"><h3>Responsive AI avatar</h3><p>Real-time AI avatar built in Unreal Engine.</p></div>
+      <div class="p"><h3>AI-generated media</h3><p>Produced for broadcast advertising contexts.</p></div>
+      <div class="p"><h3>BIM &amp; as-built documentation</h3><p>Phase 2 drawings and as-built sets for a clinic project; on-site supervision.</p></div>
+      <div class="p"><h3>Exhibition &amp; spatial design</h3><p>Booths, dealership interiors, product models, and virtual tours.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="border-bottom:none;">
+  <div class="wrap reveal">
+    <p class="label">Contact</p>
+    <h2>Get in touch</h2>
+    <p>I welcome enquiries from computational-design and AEC-AI research groups, design-technology
+      labs, and potential industrial PhD partners. A full CV is available on request.</p>
+    <div class="contact-links">
+      <a class="btn" href="mailto:bahram.m.doust@gmail.com">bahram.m.doust@gmail.com</a>
+      <a class="btn" href="https://github.com/bahram-m-doust">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/bahram-mohammaddoust">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="yr"></span> Bahram Mohammaddoust · Design-AI Systems Integrator · Computational Design &amp; AI-assisted Concept-to-Execution
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.remove('no-js');
+  document.documentElement.classList.add('js');
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});
+    els.forEach(function(e){io.observe(e);});
+  })();
+</script>
+</body>
+</html>
